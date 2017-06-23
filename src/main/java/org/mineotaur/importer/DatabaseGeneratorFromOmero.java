@@ -18,9 +18,9 @@ import omero.sys.ParametersI;
 import org.mineotaur.application.Mineotaur;
 import org.mineotaur.common.GraphDatabaseUtils;
 import org.neo4j.graphdb.*;
-import pojos.PlateData;
-import pojos.ScreenData;
-import pojos.WellData;
+import omero.gateway.model.PlateData;
+import omero.gateway.model.ScreenData;
+import omero.gateway.model.WellData;
 
 import java.io.IOException;
 import java.util.*;
@@ -65,19 +65,19 @@ public class DatabaseGeneratorFromOmero extends DatabaseGenerator{
         this.screenId = screenId;
         addDummyValues();
     }*/
-    
+
     public DatabaseGeneratorFromOmero(ResourceBundle properties) {
         this.properties = properties;
         processProperties();
     }
-    
+
     protected void processProperties() {
         this.password = properties.getString("password");
         this.userName = properties.getString("userName");
         this.hostName = this.omero = properties.getString("hostName");
         this.screenId = Long.valueOf(properties.getString("screenId"));
         if (properties.containsKey("overwrite")) {
-            overwrite = Boolean.valueOf(properties.getString("overwrite"));    
+            overwrite = Boolean.valueOf(properties.getString("overwrite"));
         }
         else {
             overwrite = (boolean) DefaultProperty.OVERWRITE.getValue();
