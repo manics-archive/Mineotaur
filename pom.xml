@@ -484,11 +484,11 @@
     <repositories>
         <repository>
             <id>maven-central</id>
-            <url>http://repo.maven.apache.org/maven2/</url>
+            <url>https://repo.maven.apache.org/maven2/</url>
         </repository>
         <repository>
             <id>ome.maven</id>
-            <url>http://artifacts.openmicroscopy.org/artifactory/maven/</url>
+            <url>https://artifacts.openmicroscopy.org/artifactory/maven/</url>
         </repository>
         <repository>
             <id>unidata-releases</id>
@@ -505,7 +505,7 @@
     <pluginRepositories>
         <pluginRepository>
             <id>spring-milestone</id>
-            <url>http://repo.spring.io/libs-milestone</url>
+            <url>https://repo.spring.io/libs-milestone</url>
             <snapshots>
                 <enabled>false</enabled>
             </snapshots>
